@@ -1,0 +1,22 @@
+{
+    "_source": ["@timestamp","rule.name","rule.action","source.geo.ip","destination.ip"],
+    "size": 200,
+    "sort": [
+        {
+        "@timestamp": {
+            "order": "desc"
+        }
+        }
+    ],
+    "query": {
+        "bool": {
+        "must": [
+            {
+            "match": {
+                "rule.name": "ET SCAN Potential SSH Scan"
+            }
+            }
+        ]
+        }
+    }
+}
